@@ -14,6 +14,9 @@
 		52F3D9DB2BD8DB9E001354E5 /* VoicesAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9DA2BD8DB9E001354E5 /* VoicesAITests.swift */; };
 		52F3D9E52BD8DB9E001354E5 /* VoicesAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9E42BD8DB9E001354E5 /* VoicesAIUITests.swift */; };
 		52F3D9E72BD8DB9E001354E5 /* VoicesAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9E62BD8DB9E001354E5 /* VoicesAIUITestsLaunchTests.swift */; };
+		52F3D9F82BD8DC38001354E5 /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9F72BD8DC38001354E5 /* Topics.swift */; };
+		52F3D9FA2BD8DCD8001354E5 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9F92BD8DCD8001354E5 /* StoriesView.swift */; };
+		52F3D9FC2BD8DCF5001354E5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9FB2BD8DCF5001354E5 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		52F3D9E02BD8DB9E001354E5 /* VoicesAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoicesAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F3D9E42BD8DB9E001354E5 /* VoicesAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesAIUITests.swift; sourceTree = "<group>"; };
 		52F3D9E62BD8DB9E001354E5 /* VoicesAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52F3D9F72BD8DC38001354E5 /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
+		52F3D9F92BD8DCD8001354E5 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		52F3D9FB2BD8DCF5001354E5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +100,10 @@
 		52F3D9C82BD8DB99001354E5 /* VoicesAI */ = {
 			isa = PBXGroup;
 			children = (
-				52F3D9C92BD8DB99001354E5 /* VoicesAIApp.swift */,
-				52F3D9CB2BD8DB99001354E5 /* ContentView.swift */,
-				52F3D9CD2BD8DB9E001354E5 /* Assets.xcassets */,
+				52F3D9F62BD8DC0F001354E5 /* Model */,
+				52F3D9F52BD8DBBF001354E5 /* App */,
+				52F3D9F42BD8DBB8001354E5 /* View */,
+				52F3D9F32BD8DBB0001354E5 /* Resources */,
 				52F3D9CF2BD8DB9E001354E5 /* Preview Content */,
 			);
 			path = VoicesAI;
@@ -125,6 +132,40 @@
 				52F3D9E62BD8DB9E001354E5 /* VoicesAIUITestsLaunchTests.swift */,
 			);
 			path = VoicesAIUITests;
+			sourceTree = "<group>";
+		};
+		52F3D9F32BD8DBB0001354E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52F3D9CD2BD8DB9E001354E5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52F3D9F42BD8DBB8001354E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52F3D9CB2BD8DB99001354E5 /* ContentView.swift */,
+				52F3D9F92BD8DCD8001354E5 /* StoriesView.swift */,
+				52F3D9FB2BD8DCF5001354E5 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52F3D9F52BD8DBBF001354E5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52F3D9C92BD8DB99001354E5 /* VoicesAIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		52F3D9F62BD8DC0F001354E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52F3D9F72BD8DC38001354E5 /* Topics.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F3D9FC2BD8DCF5001354E5 /* SettingsView.swift in Sources */,
+				52F3D9FA2BD8DCD8001354E5 /* StoriesView.swift in Sources */,
+				52F3D9F82BD8DC38001354E5 /* Topics.swift in Sources */,
 				52F3D9CC2BD8DB99001354E5 /* ContentView.swift in Sources */,
 				52F3D9CA2BD8DB99001354E5 /* VoicesAIApp.swift in Sources */,
 			);
