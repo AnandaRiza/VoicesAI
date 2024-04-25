@@ -13,6 +13,7 @@ struct StoriesView: View {
     @State private var selectedTopic: Topics = .persahabatan
     @State private var selectedMood: Mood = .bahagia
     
+    
     //@State private var todayStory: String = ""
     var body: some View {
         NavigationStack{
@@ -41,7 +42,7 @@ struct StoriesView: View {
                     
                 }
                 Section{
-                    TextEditor(text: $storyVM.storyText)
+                    TextEditor(text: $storyVM.displayedStoryText)
                         .frame(height: 200)
                         .font(.system(.headline, design: .rounded))
                         .foregroundStyle(.blue)
