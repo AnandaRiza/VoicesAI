@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoriesView: View {
     @StateObject private var storyVM = StoryVM()
-    
+    @StateObject private var speechVM = SpeechVM()
     @State private var selectedTopic: Topics = .persahabatan
     @State private var selectedMood: Mood = .bahagia
     
@@ -59,10 +59,7 @@ struct StoriesView: View {
                 
                 // MARK : - BUTTON GENERATE
                 Button {
-                    Task{
-                      await  storyVM.generateStory(topic: selectedTopic, mood: selectedMood)
-                        
-                    }
+                    todaysStory()
                 }label: {
                     if storyVM.isLoading {
                         ProgressView().scaleEffect(1)
@@ -87,4 +84,35 @@ struct StoriesView: View {
 
 #Preview {
     StoriesView()
+}
+
+// MARK : - PLAY SPEECH
+extension StoriesView{
+    func playSpeech() {
+        let apiKey = UserDefaults.standard.string(forKey: "ElevenLabsAPIKey") ?? ""
+        
+        
+        Task {
+            await speechVM.generateAndPlaySpeech(from:storyVM.displayedStoryText,apiKey: apiKey)
+        }
+    }
+    
+    
+    
+    func generateStory() {
+        Task{
+          await  storyVM.generateStory(topic: selectedTopic, mood: selectedMood)
+            
+        }
+        
+    }
+    
+    private func todaysStory(){
+        if storyVM.displayedStoryText.isEmpty{
+            generateStory()
+        }else{
+            playSpeech()
+        }
+        
+    }
 }
