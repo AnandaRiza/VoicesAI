@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct StoriesView: View {
+    @StateObject private var storyVM = StoryVM()
+    
     @State private var selectedTopic: Topics = .persahabatan
     @State private var selectedMood: Mood = .bahagia
     
-    @State private var todayStory: String = ""
+    //@State private var todayStory: String = ""
     var body: some View {
         NavigationStack{
             Form{
                 Section {
                     Picker("Choose topics", selection: $selectedTopic) {
                         ForEach(Topics.allCases, id: \.self) {topic in
-                            Text(topic.rawValue.capitalized)
+                            Text(topic.rawValue)
                                 .font(.subheadline)
                                 .foregroundStyle(.primary)
                                 .tag(topic)
@@ -27,7 +29,7 @@ struct StoriesView: View {
                     
                     Picker("Choose mood", selection: $selectedMood) {
                         ForEach(Mood.allCases, id: \.self) {topic in
-                            Text(topic.rawValue.capitalized)
+                            Text(topic.rawValue)
                                 .font(.subheadline)
                         }
                     }
@@ -39,10 +41,14 @@ struct StoriesView: View {
                     
                 }
                 Section{
-                    TextEditor(text: $todayStory)
+                    TextEditor(text: $storyVM.storyText)
                         .frame(height: 200)
                         .font(.system(.headline, design: .rounded))
                         .foregroundStyle(.blue)
+                        .disabled(storyVM.isLoading)
+                        .overlay {
+                            storyVM.isLoading ? ProgressView() : nil
+                        }
                 }header: {
                     Text("Todays Story")
                 }footer: {
@@ -52,11 +58,19 @@ struct StoriesView: View {
                 
                 // MARK : - BUTTON GENERATE
                 Button {
-                    //TODO
+                    Task{
+                      await  storyVM.generateStory(topic: selectedTopic, mood: selectedMood)
+                        
+                    }
                 }label: {
-                    Text("Generate".uppercased())
-                        .font(.system(.callout, design: .rounded))
-                        .fontWeight(.bold)
+                    if storyVM.isLoading {
+                        ProgressView().scaleEffect(1)
+                    }else{
+                        Text(storyVM.storyText.isEmpty ? "Generate".uppercased() : "Speech".uppercased())
+                            .font(.system(.callout, design: .rounded))
+                            .fontWeight(.bold)
+                    }
+                    
                         
                 }
                 .buttonStyle(PlainButtonStyle())
