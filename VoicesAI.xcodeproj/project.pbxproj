@@ -18,6 +18,7 @@
 		52F3D9FA2BD8DCD8001354E5 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9F92BD8DCD8001354E5 /* StoriesView.swift */; };
 		52F3D9FC2BD8DCF5001354E5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9FB2BD8DCF5001354E5 /* SettingsView.swift */; };
 		52F3D9FF2BD8F54B001354E5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D9FE2BD8F54B001354E5 /* Constant.swift */; };
+		52F3DA012BD9FCAB001354E5 /* StoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3DA002BD9FCAB001354E5 /* StoryVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		52F3D9F92BD8DCD8001354E5 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		52F3D9FB2BD8DCF5001354E5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		52F3D9FE2BD8F54B001354E5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		52F3DA002BD9FCAB001354E5 /* StoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				52F3D9F42BD8DBB8001354E5 /* View */,
 				52F3D9F32BD8DBB0001354E5 /* Resources */,
 				52F3D9CF2BD8DB9E001354E5 /* Preview Content */,
+				52F3DA022BD9FCB0001354E5 /* ViewModel */,
 			);
 			path = VoicesAI;
 			sourceTree = "<group>";
@@ -177,6 +180,14 @@
 				52F3D9FE2BD8F54B001354E5 /* Constant.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		52F3DA022BD9FCB0001354E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52F3DA002BD9FCAB001354E5 /* StoryVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F3D9FC2BD8DCF5001354E5 /* SettingsView.swift in Sources */,
+				52F3DA012BD9FCAB001354E5 /* StoryVM.swift in Sources */,
 				52F3D9FA2BD8DCD8001354E5 /* StoriesView.swift in Sources */,
 				52F3D9F82BD8DC38001354E5 /* Topics.swift in Sources */,
 				52F3D9CC2BD8DB99001354E5 /* ContentView.swift in Sources */,
