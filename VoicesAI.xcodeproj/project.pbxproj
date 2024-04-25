@@ -21,6 +21,7 @@
 		52F3DA012BD9FCAB001354E5 /* StoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3DA002BD9FCAB001354E5 /* StoryVM.swift */; };
 		52F3DA052BD9FD38001354E5 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 52F3DA042BD9FD38001354E5 /* GoogleGenerativeAI */; };
 		52F3DA092BDA36A7001354E5 /* ElevenLabsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3DA082BDA36A7001354E5 /* ElevenLabsService.swift */; };
+		52F3DA0B2BDA3C94001354E5 /* SpeechVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3DA0A2BDA3C94001354E5 /* SpeechVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		52F3D9FE2BD8F54B001354E5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		52F3DA002BD9FCAB001354E5 /* StoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryVM.swift; sourceTree = "<group>"; };
 		52F3DA082BDA36A7001354E5 /* ElevenLabsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenLabsService.swift; sourceTree = "<group>"; };
+		52F3DA0A2BDA3C94001354E5 /* SpeechVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				52F3DA002BD9FCAB001354E5 /* StoryVM.swift */,
+				52F3DA0A2BDA3C94001354E5 /* SpeechVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F3D9FC2BD8DCF5001354E5 /* SettingsView.swift in Sources */,
+				52F3DA0B2BDA3C94001354E5 /* SpeechVM.swift in Sources */,
 				52F3DA012BD9FCAB001354E5 /* StoryVM.swift in Sources */,
 				52F3D9FA2BD8DCD8001354E5 /* StoriesView.swift in Sources */,
 				52F3D9F82BD8DC38001354E5 /* Topics.swift in Sources */,
